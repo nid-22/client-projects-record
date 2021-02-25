@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        
+        
+        <th scope="col"> Id</th>
+        <th scope="col">project name</th>
+        <th scope="col">project type</th>
+        <th scope="col">created at</th>        
+        <th scope="col">created by</th>
+       
+      </tr>
+    </thead>
+    <tbody>        
+
+      <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.project_name}}</td>       
+        
+        <td>
+            {{i.project_type}}
+        </td>
+        <td>
+            {{i.created_at}}
+        </td>
+        <td>
+            {{i.created_by}}
+        </td>
+        <td>
+            <a href="delete_project/{{i.id}}}/">Delete</a>
+        </td>
+        <td>
+            <a href="update_project/{{i.id}}}/">Update</a>
+        </td>
+      </tr>   
+      {%endfor%}   
+    </tbody>
+  </table>
+{% endblock content %}
